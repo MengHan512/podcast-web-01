@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE GLIMPSE PODCAST · 惊鸿一瞥</title>
+  <meta name="description" content="一档用方法拆穿流行叙事的播客。结构性原则 × 关系性原则，带你看见现象背后的生产关系。">
+  <meta property="og:title" content="ONE GLIMPSE PODCAST · 惊鸿一瞥">
+  <meta property="og:description" content="一档用方法拆穿流行叙事的播客。结构性原则 × 关系性原则。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="paper-tex"><div class="rules"></div></div>
+  <div class="wrap" id="home-root">
+    <!-- 导航 -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="brand" id="brand"></a>
+        <nav class="nav-links" id="nav-links" aria-label="主导航"></nav>
+        <a href="episode.html?id=ep01" class="nav-cta" id="nav-cta"></a>
+        <button class="hamburger" id="hamburger" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero（用到：双人播客交流视频 + 两个 IP 头像，头像可点头像弹窗） -->
+      <section class="home-hero" id="top">
+        <div class="container home-hero-grid reveal">
+          <div class="hero-text">
+            <span id="hero-tag"></span>
+            <h1 id="hero-title"></h1>
+            <div id="hero-cn"></div>
+            <p id="hero-desc"></p>
+            <div class="hero-cta">
+              <a href="episode.html?id=ep01" class="btn btn-primary" id="cta-primary"></a>
+              <a href="#subscribe" class="btn btn-ghost" id="cta-secondary"></a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <span class="hero-badge">LIVE CUT</span>
+            <video id="hero-video" autoplay muted loop playsinline preload="metadata">
+              <source id="hero-src" src="" type="video/mp4">
+              你的浏览器不支持视频播放。
+            </video>
+            <div class="hero-avatars" id="hero-avatars" aria-label="主播 IP 形象（点击查看简介）"></div>
+            <div class="hero-scribbles" id="hero-scribbles" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 关于我们 -->
+      <section id="about">
+        <div class="container about-grid reveal">
+          <div>
+            <div class="kicker">about us</div>
+            <h2 id="about-title"></h2>
+            <div id="about-paragraphs"></div>
+          </div>
+          <div id="about-stats"></div>
+        </div>
+      </section>
+
+      <!-- 单集列表（首页主入口） -->
+      <section id="episodes">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="kicker">episodes</span>
+            <h2 class="section-title">全部单集</h2>
+          </div>
+          <div class="ep-cards reveal" id="episode-cards"></div>
+        </div>
+      </section>
+
+      <!-- 订阅 -->
+      <section class="subscribe" id="subscribe">
+        <div class="container reveal">
+          <h2 class="st" id="sub-title"></h2>
+          <form class="sub-form" id="sub-form">
+            <input type="email" id="sub-input" placeholder="" required aria-label="邮箱地址">
+            <button type="submit" id="sub-btn"></button>
+          </form>
+          <div class="socials" id="socials"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="fbrand" id="footer-brand"></div>
+        <div id="footer-note"></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
